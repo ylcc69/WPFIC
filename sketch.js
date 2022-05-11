@@ -3,7 +3,12 @@
    19th March 2022
 */
 
-var freedomIdexChina = 177;
+/*
+   Updating in 11 May 2022
+   Press freedom index 2022
+   */
+
+var freedomIdexChina = 175;
 let x = 1500;
 let stem_drawn = 0;
 let img;
