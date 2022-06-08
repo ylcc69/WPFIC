@@ -4,7 +4,12 @@
 */
 
 /*
-   Updating in 11 May 2022
+   Updated in 11 May 2022
+   Press freedom index 2022
+   */
+
+/*
+   Updated in 08 June 2022
    Press freedom index 2022
    */
 
@@ -20,9 +25,9 @@ function preload () {
 
 function setup() {
   setAttributes("antialias", true);
-  createCanvas(windowWidth, windowHeight, WEBGL);
-  background(255);
-  frameRate(52);
+  createCanvas(windowWidth, windowHeight);
+  background(25, 0, 255);
+  frameRate(1000);
   noStroke();
   noFill();
   //img = loadImage("window.png");
@@ -36,23 +41,27 @@ function draw() {
   //rectMode(CENTER);
   //rect(100, 100, 600, 600);
   resize = map(freedomIdexChina, 1, 180, 5, 1);
-  image(img, 0, 0, windowWidth * resize, windowHeight * resize);
+  image(img, windowWidth/2, windowHeight/2, windowWidth * resize, windowHeight * resize);
 
   fill(x / 5.2, 28, 255, 255);
 
 
 
-  x = x - 10;
+  rectMode(RADIUS);
+  translate(width / 2, height / 2);
 
-  if (x == 100) {
+  x = x - 5;
+
+  if (x == -200) {
     noLoop();
   }
 
-  rotateX(x / random(3));
-  rotateZ(x / 31);
+  rotate(x / random(3));
+  //rotateZ(x / 31);
   scale(0.15);
   translate(x, 0, 0);
-  box(10 + x - x / random(20, 50), x - 499);
+  rect(width / 2, height / 2, x - x / random(20, 40), x - 499);
   fill(x / 5.2, 28, 0, 255);
 
+  print(x);
 }
