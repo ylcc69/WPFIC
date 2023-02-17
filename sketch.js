@@ -13,6 +13,11 @@
    Press freedom index 2022
    */
 
+/*
+   Updated in 17 Feb 2023
+   Visability check
+   */
+
 var freedomIdexChina = 175;
 let x = 1500;
 let stem_drawn = 0;
